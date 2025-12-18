@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Alumni Sistem Informasi</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📚 Web Alumni SI</h1>
+            <p>Sistem Informasi Alumni Jurusan Sistem Informasi</p>
+        </header>
+
+        <div class="nav-buttons">
+            <button id="tampilData" class="btn btn-primary">📋 Tampil Data Alumni</button>
+            <button id="tambahAlumni" class="btn btn-success">➕ Tambah Alumni</button>
+        </div>
+
+        <div id="formContainer" class="form-container" style="display: none;">
+            <h2>➕ Tambah Data Alumni</h2>
+            <form id="formAlumni">
+                <input type="text" id="nim" placeholder="NIM" required>
+                <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                <input type="text" id="angkatan" placeholder="Angkatan (2020)" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="text" id="pekerjaan" placeholder="Pekerjaan" required>
+                <textarea id="alamat" placeholder="Alamat" required></textarea>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-success">💾 Simpan</button>
+                    <button type="button" id="batalTambah" class="btn btn-secondary">❌ Batal</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="tabelContainer" class="table-container" style="display: none;">
+            <div class="table-header">
+                <h2>📋 Data Alumni</h2>
+                <input type="text" id="searchInput" placeholder="🔍 Cari nama atau NIM...">
+            </div>
+            <table id="tabelAlumni">
+                <thead>
+                    <tr>
+                        <th>NIM</th>
+                        <th>Nama</th>
+                        <th>Angkatan</th>
+                        <th>Email</th>
+                        <th>Pekerjaan</th>
+                        <th>Alamat</th>
+                        <th>Aksi</th>
+                    </tr>
+                </thead>
+                <tbody id="tbodyAlumni">
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
